@@ -1,0 +1,24 @@
+/* 508170222 Nick Chen, 508170301 Matt Hsiao */
+@charset "UTF-8";
+
+* {
+	font-size: 30px;	
+}
+
+#login {
+	position: absolute;
+	left: 5%;
+	top: 40%;
+}
+
+#signUp {
+	position: absolute;
+	left: 60%;
+	top: 40%;
+}
+
+#or {
+	position: absolute;
+	left: 45%;
+	top: 45%;
+}
