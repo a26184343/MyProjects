@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ComposeWithViewModel</string>
+    <string name="result">Result: </string>
+    <string name="search">Search name in list:</string>
+    <string name="searchButton">Search</string>
+    <string name="found">Found it</string>
+    <string name="index">index</string>
+    <string name="close">Close</string>
+    <string name="contin">continue</string>
+    <string name="searchFood">Food\'s price you wanna search:</string>
+    <string name="noSuchFood">No Such Food!</string>
+    <string name="cleanButton">Clean</string>
+</resources>
