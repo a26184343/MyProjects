@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SEDIA</string>
+    <string name="bulletinAreaButton">Bulletin</string>
+    <string name="chatAreaButton">Chats</string>
+    <string name="demandAreaButton">Demands</string>
+    <string name="personalProfileAreaButton">Me</string>
+    <string name="videoPostAreaButton">Videos</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="clean">Clean</string>
+    <string name="plusItem">+</string>
+    <string name="closeScreen">X</string>
+    <string name="announce">Announce</string>
+    <string name="thingsToAnnounce">Things to Announce:</string>
+    <string name="saySomething">Say something</string>
+    <string name="share">Share</string>
+    <string name="title">Title</string>
+    <string name="anythingYouWantToTalk">Anything you want to talk:</string>
+    <string name="newDemand">New demand</string>
+    <string name="howCanWeHelpYou">How can we help you?</string>
+    <string name="submit">Submit</string>
+    <string name="invalid">Invalid</string>
+</resources>
