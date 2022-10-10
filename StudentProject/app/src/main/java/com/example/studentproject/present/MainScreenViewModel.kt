@@ -19,56 +19,34 @@ class MainScreenViewModel: ViewModel() {
     private val _mainScreenState = MutableStateFlow(MainScreenState())
     val mainScreenState: StateFlow<MainScreenState> = _mainScreenState
 
-    var currentPage by mutableStateOf(0)
-        private set
-
     init {
-        resetToBulletinPage()
-    }
-
-    private fun resetToBulletinPage() {
-        _mainScreenState.value = MainScreenState(whichPageShouldShow = 0)
+        updatePage(4)
     }
 
     fun changeToBulletin() {
-        if(currentPage != 0) {
-            currentPage = 0
-            updatePage()
-        }
+        updatePage(0)
     }
 
     fun changeToChat() {
-        if(currentPage != 1) {
-            currentPage = 1
-            updatePage()
-        }
+        updatePage(1)
     }
 
     fun changeToVideo() {
-        if(currentPage != 2) {
-            currentPage = 2
-            updatePage()
-        }
+        updatePage(2)
     }
 
     fun changeToDemand() {
-        if(currentPage != 3) {
-            currentPage = 3
-            updatePage()
-        }
+        updatePage(3)
     }
 
     fun changeToPersonalProfile() {
-        if(currentPage != 4) {
-            currentPage = 4
-            updatePage()
-        }
+        updatePage(4)
     }
 
-    private fun updatePage() {
+    private fun updatePage(page: Int) {
         _mainScreenState.update { currentState->
             currentState.copy(
-                whichPageShouldShow = currentPage
+                whichPageShouldShow = page
             )
         }
     }

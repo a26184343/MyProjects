@@ -15,25 +15,24 @@ class DemandsScreenViewModel: ViewModel() {
     private val _demandsScreenState = MutableStateFlow(DemandsScreenState())
     val demandsScreenState: StateFlow<DemandsScreenState> = _demandsScreenState
 
-    var currentPage by mutableStateOf(0)
-        private set
-
-    fun onOpenAddPage() {
-        if(currentPage != 1) currentPage = 1
-        updatePage()
+    init {
+        updateDemands()
     }
 
-    private fun updatePage() {
+    fun onOpenAddPage() {
+        updatePage(1)
+    }
+
+    private fun updatePage(page: Int) {
         _demandsScreenState.update { currentState ->
             currentState.copy(
-                screenShouldShow = currentPage
+                screenShouldShow = page
             )
         }
     }
 
     fun toPage0() {
-        currentPage = 0
-        updatePage()
+        updatePage(0)
     }
 
     var tempTitle by mutableStateOf("")
@@ -79,7 +78,6 @@ class DemandsScreenViewModel: ViewModel() {
     }
 
     private fun openSingleDemandPage() {
-        currentPage = 2
-        updatePage()
+        updatePage(2)
     }
 }

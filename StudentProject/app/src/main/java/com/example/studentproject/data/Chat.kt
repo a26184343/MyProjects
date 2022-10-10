@@ -1,15 +1,19 @@
 package com.example.studentproject.data
 
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.util.*
 
 data class Chat(
-    val chatTime: String = "",
-    val chatHost: String = "",
-    val chatTitle: String = "",
-    val chatContent: String = ""
+    val date: String = "",
+    val host: String = "",
+    val title: String = "",
+    val content: String = "",
+    val key: String = ""
 )
 
 fun startChat(
@@ -21,7 +25,7 @@ fun startChat(
     val currentDateAndTime: String = dateFormat.format(Date())
     val database = Firebase.database.reference.child("chats")
     val chatId = database.push().key!!
-    val chat = Chat(currentDateAndTime, chatHost, chatTitle, chatContent)
+    val chat = Chat(currentDateAndTime, chatHost, chatTitle, chatContent, chatId)
     database.child(chatId).setValue(chat)
         .addOnCompleteListener {
 

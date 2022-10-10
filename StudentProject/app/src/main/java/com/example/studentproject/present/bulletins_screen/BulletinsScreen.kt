@@ -39,6 +39,7 @@ fun BulletinsScreen(
                 content = bulletinsScreenViewModel.bulletinData.announceContent,
                 author = bulletinsScreenViewModel.bulletinData.announcer,
                 date = bulletinsScreenViewModel.bulletinData.announceTime,
+                onClose = {bulletinsScreenViewModel.onClose()}
             )
         }
     }

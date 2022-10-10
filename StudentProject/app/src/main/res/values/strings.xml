@@ -21,4 +21,8 @@
     <string name="howCanWeHelpYou">How can we help you?</string>
     <string name="submit">Submit</string>
     <string name="invalid">Invalid</string>
+    <string name="send">-></string>
+    <string name="chatWithHim">Chat With Him/Her:</string>
+    <string name="canNotBeEmpty">Can Not Be Empty!</string>
+    <string name="loading">Loading...</string>
 </resources>

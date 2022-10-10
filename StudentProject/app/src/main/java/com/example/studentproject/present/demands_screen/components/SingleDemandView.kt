@@ -42,7 +42,7 @@ fun SingleDemandView(
         Button(
             onClick = onClose
         ) {
-            Text(stringResource(R.string.closeScreen))
+                Text(stringResource(R.string.closeScreen))
         }
     }
 }

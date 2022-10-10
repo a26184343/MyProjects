@@ -17,6 +17,7 @@ class BulletinsScreenViewModel: ViewModel() {
 
     init {
         updateBulletins()
+        updatePage(0)
     }
 
     fun onAddBulletin() {
@@ -72,5 +73,9 @@ class BulletinsScreenViewModel: ViewModel() {
 
     private fun onOpenSingle() {
         updatePage(2)
+    }
+
+    fun onClose() {
+        updatePage(0)
     }
 }
