@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun BulletinCard(
@@ -16,7 +17,8 @@ fun BulletinCard(
         modifier = modifier.fillMaxWidth()
     ) {
         Text(
-            text = content
+            text = content,
+            fontSize = 30.sp
         )
         Text(
             text = date

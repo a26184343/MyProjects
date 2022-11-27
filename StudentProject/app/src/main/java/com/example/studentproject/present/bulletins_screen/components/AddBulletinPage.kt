@@ -21,6 +21,7 @@ fun AddBulletinPage(
     onClose: () -> Unit,
     content: String,
     onContentChange: (String) -> Unit,
+    isAdmin: Boolean,
     onAnnounce: () -> Unit,
     onClean: () -> Unit
 ) {
@@ -45,9 +46,15 @@ fun AddBulletinPage(
             modifier = modifier.fillMaxWidth(),
             onValueChange = onContentChange,
             label = {
-                Text(
-                    text = stringResource(R.string.thingsToAnnounce)
-                )
+                if(isAdmin) {
+                    Text(
+                        text = stringResource(R.string.thingsToAnnounce)
+                    )
+                } else {
+                    Text(
+                        text = stringResource(R.string.needAdminPermission)
+                    )
+                }
             },
             isError = false,
             keyboardOptions = KeyboardOptions.Default.copy(

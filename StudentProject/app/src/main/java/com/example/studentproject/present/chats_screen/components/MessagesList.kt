@@ -12,7 +12,7 @@ fun MessagesList(
     messages: List<Message>
 ) {
     LazyColumn(
-        verticalArrangement = Arrangement.spacedBy(5.dp)
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(messages) {message ->
             MessageCard(

@@ -20,6 +20,7 @@ import com.example.studentproject.present.bulletins_screen.BulletinsScreen
 import com.example.studentproject.present.chats_screen.ChatsScreen
 import com.example.studentproject.present.demands_screen.DemandsScreen
 import com.example.studentproject.present.navigation.navBar
+import com.example.studentproject.present.posts_screen.PostsScreen
 import com.example.studentproject.present.posts_screen.components.ImagePicker
 import com.example.studentproject.present.profile_screen.ProfileScreen
 
@@ -36,7 +37,7 @@ fun MainScreen(
         1 -> {
             ChatsScreen(user = mainScreenState.user)
         }
-        2 -> {ImagePicker()}
+        2 -> {PostsScreen()}
         3 -> {DemandsScreen(author = mainScreenState.user)}
         4 -> {
             ProfileScreen(

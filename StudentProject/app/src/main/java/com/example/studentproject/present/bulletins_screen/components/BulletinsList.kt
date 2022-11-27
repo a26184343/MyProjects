@@ -2,6 +2,8 @@ package com.example.studentproject.present.bulletins_screen.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
@@ -16,6 +18,9 @@ fun BulletinsList(
     onSingleBulletin: (Bulletin) -> Unit
 ) {
     LazyColumn(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(top = 30.dp, start = 30.dp, bottom = 78.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(existBulletin) { bulletin ->

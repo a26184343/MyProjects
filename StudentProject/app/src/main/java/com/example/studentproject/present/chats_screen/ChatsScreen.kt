@@ -44,7 +44,7 @@ fun ChatsScreen(
                 onClose = {chatsScreenViewModel.onCloseSingleChat()},
                 message = chatsScreenViewModel.tempMessage,
                 onMessageChange = {chatsScreenViewModel.onMessageChange(it)},
-                onComment = {chatsScreenViewModel.onComment()}
+                onComment = {chatsScreenViewModel.onComment(user)}
             )
         }
         3 -> {

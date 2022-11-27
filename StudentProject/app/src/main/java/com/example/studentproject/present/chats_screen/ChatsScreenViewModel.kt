@@ -104,7 +104,7 @@ class ChatsScreenViewModel: ViewModel() {
         updateChats()
     }
 
-    fun onComment() {
+    fun onComment(user: String) {
         val dateFormat = SimpleDateFormat("yyyy.MM.dd G 'at' HH.mm:ss z")
         val date: String = dateFormat.format(Date())
         val database = Firebase.database.reference

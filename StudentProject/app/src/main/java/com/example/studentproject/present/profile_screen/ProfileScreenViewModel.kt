@@ -33,4 +33,38 @@ class ProfileScreenViewModel: ViewModel() {
         user = ""
         password = ""
     }
+
+    fun makePassword(password: String) {
+        val origin = "ssofjiwwe"
+        val originCharArr = origin.toCharArray()
+        var originIntArr = IntArray(26)
+        val hash = "abcdefghijklmnopqrstuvwxyz"
+        var hashCharArr = hash.toCharArray()
+        var hashIntArr = IntArray(26)
+        var i = 0
+        for(c in originCharArr) {
+            originIntArr[++i - 1] = c.toInt()
+        }
+        for(j in originIntArr)
+            print("$j ")
+        println()
+        i = 0
+        for(c in hashCharArr) {
+            hashIntArr[++i - 1] = c.toInt()
+        }
+        for(j in hashIntArr)
+            print("$j ")
+        println()
+        var result = IntArray(26)
+        for(j in 0..25) {
+            result[j] = originIntArr[j] xor hashIntArr[j]
+        }
+        for(j in result)
+            print("$j ")
+        println()
+        var resultString: String = ""
+        for(j in result)
+            resultString += j.toChar()
+        //println(resultString)
+    }
 }

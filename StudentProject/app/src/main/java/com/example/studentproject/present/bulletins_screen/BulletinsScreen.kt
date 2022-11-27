@@ -30,6 +30,7 @@ fun BulletinsScreen(
                 onClose = {bulletinsScreenViewModel.onCloseAddPage()},
                 content = bulletinsScreenViewModel.tempContent,
                 onContentChange = {bulletinsScreenViewModel.onContentChange(it)},
+                isAdmin = bulletinsScreenState.isAdmin,
                 onAnnounce = {bulletinsScreenViewModel.onAnnounce(author = user)},
                 onClean = {bulletinsScreenViewModel.onClean()}
             )

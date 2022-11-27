@@ -1,6 +1,8 @@
 package com.example.studentproject.present.chats_screen.components
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
 import androidx.compose.material.Text
@@ -22,10 +24,16 @@ fun SingleChatView(
     onMessageChange: (String) -> Unit,
     onComment: () -> Unit,
 ) {
-    Column() {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(bottom = 125.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
         SingleChatCard(
             data = data
         )
+        Text(stringResource(R.string.hearWhatTheySay))
         MessagesList(messages = messages)
     }
     Button(
